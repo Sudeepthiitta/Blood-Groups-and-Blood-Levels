@@ -1,0 +1,274 @@
+/* Resetting margins and padding for the entire page */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Ensure the body and html take up the full height of the page */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Full-page background with humanblood image */
+body {
+    background-image: url('bloodimg.jpg');
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-position: center; /* Center the background image */
+    background-repeat: repeat; /* Avoid repeating the image */
+}
+
+/* Navbar styling */
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent background for contrast */
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    padding: 15px; /* Space around the navbar */
+    position: fixed; /* Stick the navbar to the top */
+    top: 0;
+    left: 0;
+    z-index: 100; /* Ensure navbar is above all content */
+}
+
+.navbar ul {
+    list-style: none; /* Remove default bullet points */
+    display: flex; /* Align items horizontally */
+    margin: 0; /* Remove extra spacing */
+    padding: 0; /* Remove extra padding */
+}
+
+.navbar ul li {
+    margin-left: 20px; /* Space between items */
+}
+
+.navbar ul li a {
+    text-decoration: none; /* Remove link underlines */
+    color: white; /* White text for better visibility */
+    font-size: 16px; /* Font size of the links */
+    font-weight: bold; /* Make text bold */
+    text-transform: uppercase; /* Uppercase text */
+    padding: 5px 10px; /* Add some padding around links */
+    transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00; /* Highlight link color on hover */
+}
+
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #77775f;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.navbar ul li:hover::after {
+    width: 100%; /* Expand underline effect on hover */
+    background: #ffcc00; /* Bright yellow for the underline to match list emphasis */
+    transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transition for both width and color */
+}
+
+
+/* Content section */
+.content {
+    text-align: center;
+    color: #fefcfc;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: 70px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 80px; /* To avoid overlap with navbar */
+    z-index: 5; /* Ensures content is above the background */
+}
+
+/* Headings */
+.content h1 {
+    font-size: 26px;
+    color: rgb(251, 249, 249);
+    font-weight: bold;
+    background-color: rgb(199, 20, 50);
+    padding: 20px;
+    border-radius: 50px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.content p {
+    font-size: 25px;
+    color: white;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.content h2 {
+    font-size: 24px;
+    color: rgb(195, 195, 9);
+    font-weight: bold;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Table Styling */
+/*table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+
+    color: #ffffff; 
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f4f4;
+    
+    color: #333;
+    font-size: 18px;
+}
+
+table td {
+    color: #555;
+    font-size: 16px;
+}
+
+table tr:nth-child(even) {
+   
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+
+    background-color: #f1f1f1;
+}
+
+/* List Styl
+ul {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: left;
+    color: white;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+ul li strong {
+    color: #bfc214;
+}
+
+/* Responsive Design 
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .content {
+        width: 95%;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+}*/
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    color: #ffffff; /* White text for better visibility */
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black to suit the red background */
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.6); /* Light border to match the theme */
+}
+
+table th {
+    background-color: rgba(255, 69, 69, 0.8); /* Slightly darker red for the header */
+    color: #ffffff; /* White text for header */
+    font-size: 18px;
+}
+
+table td {
+    color: #e0e0e0; /* Light gray for text */
+    font-size: 16px;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent white for alternating rows */
+}
+
+table tr:hover {
+    background-color: rgba(255, 69, 69, 0.2); /* Subtle red highlight on hover */
+}
+
+/* List Styling */
+ul {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: left;
+    color: #ffffff; /* White text for readability */
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+ul li strong {
+    color: #ffcc00; /* Bright yellow for emphasis */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .content {
+        width: 95%;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+}
+
+

@@ -1,0 +1,231 @@
+/**{
+   
+    padding: 0%;
+    margin:0%;
+    font-family: sans-serif;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding:35px 0;
+    display: flex;
+    align-items: center;
+    justify-content:end;
+}
+
+.navbar ul li{
+    list-style: none; 
+    mask-border-outset: rgb(245, 243, 243);
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #f9f6f6;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #e7e40c;
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+
+}
+.content{
+    margin-left: 5px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left:4%;
+    transform: translatey(-50%);
+    text-align: center;
+    color:#fefcfc;
+}
+p{
+    font-size: 23px;
+    color: white;
+    padding: 0px;
+    margin: 3px ;
+    text-align: justify;
+    text-align: center;
+}
+.content h2{
+    padding: 5%;
+    margin-right: 500px;
+    font-size: 30px;
+    padding: 20px;
+    color: rgb(251, 249, 249);
+    font-weight: bold;
+    background-color: rgb(176, 176, 214);
+    border-radius: 50px;
+    width: 500px;
+    
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)),url('humanblood.jpg');
+    background-size:cover;
+    background-position: center;
+
+    background-position: center ;
+
+}
+ul{
+    font-size: 20px;
+    
+
+}*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000; /* Set a fallback dark background color */
+    color: #fff;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navbar ul {
+    
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    
+    text-decoration: none;
+    color: #f9f6f6;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #a0a091;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.5s ease;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.navbar ul li:hover a {
+    color: #b1b19c;
+}
+
+.content {
+    position: absolute;
+    margin-top: 100px;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: #fefcfc;
+}
+
+.content p {
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.content h2 {
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #01110c;
+    color: #252222;
+    background-color: rgb(203, 203, 176);
+    border-radius: 50px;
+    width: fit-content;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.75), 
+            rgba(0, 0, 0, 0.75)
+        ), 
+        url('bloodimg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+ul {
+    font-size: 20px;
+}
+
+ul li {
+    color: #fff;
+    margin: 5px 0;
+}
+
+ul li strong {
+    color: #c4c38f;
+}
+.blood-group-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 1rem;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+    color: #ffffff; /* White text for visibility */
+}
+
+.blood-group-table thead {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black header */
+    color: #ffffff; /* White text for header */
+}
+
+.blood-group-table th,
+.blood-group-table td {
+    border: 1px solid #ffffff; /* White borders for visibility */
+    padding: 10px;
+}
+
+.blood-group-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly darker transparency for alternating rows */
+}
+
+.blood-group-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Highlight on hover */
+}

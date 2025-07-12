@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Blood Health Awareness</title>
+    <link rel="stylesheet" href="styleo.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <ul>
+            <li><a href="group.html">Home</a></li>
+            <li><a href="blood.html">Blood Groups</a></li>
+            <li><a href="blooda.html">Blood Levels</a></li>
+            <li><a href="bloodb.html">Health Insights</a></li>
+            <li><a href="bloodo.html">About Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <h1>About Us</h1>
+
+        <section class="intro">
+            <h2>Who We Are</h2>
+            <p>We are a group of volunteers committed to raising awareness about blood health, including blood groups and blood levels. Our mission is to educate and empower communities with the knowledge they need to lead healthier lives.</p>
+        </section>
+
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>Our mission is to provide communities with valuable information about the importance of blood types, blood levels, and their impact on overall health. We aim to distribute this information to various areas and assist people in making informed decisions about their health through free blood tests and medicine distribution.</p>
+        </section>
+
+        <section class="history">
+            <h2>Our Journey</h2>
+            <p>Founded in 2024, our initiative started with a simple goal: to raise awareness about the importance of blood health. In the past year, we’ve conducted numerous surveys, blood tests, and medicine distribution campaigns. We’ve reached over 1,000 people, educating them about the vital role blood health plays in their well-being.</p>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form" onsubmit="return validateForm()">
+                <input type="text" id="name" placeholder="Your Name" name="name">
+                <input type="email" id="email" placeholder="Your Email" name="email">
+                <textarea id="message" placeholder="Your Message" name="message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <p id="response"></p>
+        </section>
+    </div>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript for Form Validation -->
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            var response = document.getElementById("response");
+
+            // Clear previous response message
+            response.innerHTML = "";
+
+            // Validate form fields
+            if (name == "" || email == "" || message == "") {
+                response.innerHTML = "All fields are required!";
+                response.style.color = "red";
+                return false;
+            }
+
+            // Email validation pattern
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!emailPattern.test(email)) {
+                response.innerHTML = "Please enter a valid email address.";
+                response.style.color = "red";
+                return false;
+            }
+
+            // If everything is fine
+            response.innerHTML = "Thank you for contacting us! We will get back to you shortly.";
+            response.style.color = "green";
+            return true;
+        }
+    </script>
+</body>
+</html>

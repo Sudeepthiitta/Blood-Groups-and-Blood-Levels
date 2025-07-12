@@ -1,0 +1,173 @@
+/* Resetting margins and padding for the entire page */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Ensure the body and html take up the full height of the page */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Full-page background with humanblood image */
+body {
+    background-image: url('bloodimg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    font-family: 'Helvetica', sans-serif; /* Use a modern font */
+}
+
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent background for navbar */
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Content Section */
+.content {
+    text-align: center;
+    color: #fefcfc;
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* General Heading Styles */
+.content h1, .content h2 {
+    font-size: 28px;
+    color: rgb(251, 249, 249);
+    font-weight: bold;
+    background-color: rgb(199, 20, 50);
+    padding: 20px;
+    border-radius: 50px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin-top: 50px;
+    border-collapse: collapse;
+    color: #fefcfc;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    overflow: hidden; /* Ensure corners are rounded */
+}
+
+table th, table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #444; /* Soft border for better row separation */
+}
+
+table th {
+    background-color: rgba(255, 69, 69, 0.8); /* Dark red header */
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+table td {
+    font-size: 16px;
+    color: #d1d1d1; /* Light gray text for rows */
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05); /* Slightly lighter background for even rows */
+}
+
+table tr:hover {
+    background-color: rgba(255, 69, 69, 0.3); /* Highlight row in red on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* New Blood Percentage Column */
+table th:last-child {
+    background-color: rgb(199, 20, 50); /* Teal background for Blood Percentage */
+}
+
+table td:last-child {
+    font-weight: bold;
+    color: #ffcc00; /* Bright yellow for Blood Percentage */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .content {
+        width: 95%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    table th, table td {
+        padding: 12px 15px;
+    }
+    
+    .content h1 {
+        font-size: 24px;
+    }
+    
+    .content h2 {
+        font-size: 22px;
+    }
+}

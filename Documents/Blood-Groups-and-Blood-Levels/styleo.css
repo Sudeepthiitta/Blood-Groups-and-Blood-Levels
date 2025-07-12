@@ -1,0 +1,191 @@
+/* Resetting margins and padding for the entire page */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Ensure the body and html take up the full height of the page */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Full-page background with human blood image */
+body {
+    background-image: url('bloodimg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    font-family: 'Helvetica', sans-serif; /* Use a modern font */
+}
+
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent background for navbar */
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px; /* Reduced font size */
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Content Section */
+.content {
+    text-align: center;
+    color: #fefcfc;
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* General Heading Styles */
+.content h1 {
+    font-size: 20px; /* Reduced font size */
+    color: rgb(251, 249, 249);
+    font-weight: bold;
+    background-color: rgb(199, 20, 50);
+    padding: 10px;
+  
+    width: 450px;
+    margin: 0 auto;
+    text-align: center;
+}
+.content h2 {
+    font-size: 24px; /* Reduced font size */
+    color: rgb(251, 249, 249);
+    font-weight: bold;
+    padding: 15px;
+    width: 450px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* Section styling */
+section {
+    margin-bottom: 30px; /* Adjusted margin */
+    padding: 15px;
+}
+
+section h2 {
+    color: #f1f1f1;
+    font-size: 20px; /* Reduced font size */
+    margin-bottom: 15px;
+}
+
+section p {
+    color: #d1d1d1;
+    font-size: 14px; /* Reduced font size */
+    line-height: 1.6;
+}
+
+/* Contact Us Form Styling */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact input, .contact textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px; /* Reduced font size */
+}
+
+.contact button {
+    width: 50%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: rgb(199, 20, 50);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Reduced font size */
+}
+
+.contact button:hover {
+    background-color: #ffcc00;
+}
+
+/* Contact Us Response Message */
+#response {
+    margin-top: 15px;
+    font-size: 14px; /* Reduced font size */
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .content {
+        width: 95%;
+    }
+
+    section h2 {
+        font-size: 18px; /* Further reduced font size */
+    }
+
+    .content h1 {
+        font-size: 20px; /* Further reduced font size */
+    }
+
+    .contact form {
+        width: 90%;
+    }
+
+    .contact input, .contact textarea {
+        width: 100%;
+    }
+}
