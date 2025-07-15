@@ -20,6 +20,7 @@
 }
 
 .navbar{
+    position: fixed;
     width: 85%;
     margin: auto;
     padding:35px;
